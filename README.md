@@ -1,16 +1,33 @@
-# React + Vite
+# Qubrit Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+큐브릿(Qubrit) - 참여형 학습 플랫폼 프론트엔드
 
-Currently, two official plugins are available:
+## 기술 스택
+- React
+- Vite
+- JavaScript
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 시작하기
+\`\`\`bash
+git clone https://github.com/qubrit-team/qubrit-frontend.git
+cd qubrit-frontend
+\`\`\`
 
-## React Compiler
+\`\`\`bash
+npm install
+\`\`\`
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+\`\`\`bash
+npm run dev
+\`\`\`
 
-## Expanding the ESLint configuration
+브라우저에서 \`http://localhost:5173\`으로 접속하면 됩니다.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 백엔드 연동
+백엔드 서버(\`qubrit-backend\`)가 \`http://localhost:8080\`에서 함께 실행 중이어야 API 연동이 정상 동작합니다.
+백엔드 저장소: https://github.com/qubrit-team/qubrit-backend
+
+## 팀원
+| 학번 | 이름 | 역할 |
+|---|---|---|
+| 2203 | 김하진 | 기획, 백엔드, DB
