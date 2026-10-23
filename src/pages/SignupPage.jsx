@@ -7,7 +7,7 @@ import Checkbox from "../components/Checkbox";
 // import TermsView from '../components/TermsView'
 import PasswordRules from "../components/PasswordRules";
 import { checkPassword } from "../utils/password";
-import { checkEmail, signup } from "../api/auth";
+import { checkEmail, sendCode, verifyCode, signup } from "../api/auth";
 import { ApiError, describeError } from "../api/http";
 import "../styles/SignupPage.css";
 
@@ -33,6 +33,13 @@ function SignupPage({ onNavigate }) {
   const [emailMsg, setEmailMsg] = useState({ text: "", tone: "" });
   const [emailTouched, setEmailTouched] = useState(false);
   const [checkingEmail, setCheckingEmail] = useState(false);
+  // 인증코드: codeSent 후 코드 입력, 확인되면 emailVerified
+  const [codeSent, setCodeSent] = useState(false);
+  const [code, setCode] = useState("");
+  const [codeMsg, setCodeMsg] = useState({ text: "", tone: "" });
+  const [emailVerified, setEmailVerified] = useState(false);
+  const [sendingCode, setSendingCode] = useState(false);
+  const [verifyingCode, setVerifyingCode] = useState(false);
   const [password, setPassword] = useState("");
   const [confirm, setConfirm] = useState("");
   const [nickname, setNickname] = useState("");
@@ -54,6 +61,7 @@ function SignupPage({ onNavigate }) {
     nicknameTouched && nickname.length > 0 && !nicknameValid;
   const canSubmit =
     emailChecked &&
+    emailVerified &&
     passwordValid &&
     confirm === password &&
     nicknameValid &&
@@ -74,6 +82,41 @@ function SignupPage({ onNavigate }) {
       setEmailMsg({ text: describeError(err), tone: "error" });
     } finally {
       setCheckingEmail(false);
+    }
+  };
+
+  const resetVerification = () => {
+    setCodeSent(false);
+    setCode("");
+    setCodeMsg({ text: "", tone: "" });
+    setEmailVerified(false);
+  };
+
+  const handleSendCode = async () => {
+    setSendingCode(true);
+    setCodeMsg({ text: "", tone: "" });
+    try {
+      await sendCode(email);
+      setCodeSent(true);
+      setCode("");
+      setCodeMsg({ text: "인증코드를 보냈어요. 5분 안에 입력해 주세요", tone: "ok" });
+    } catch (err) {
+      setCodeMsg({ text: describeError(err), tone: "error" });
+    } finally {
+      setSendingCode(false);
+    }
+  };
+
+  const handleVerifyCode = async () => {
+    setVerifyingCode(true);
+    try {
+      await verifyCode(email, code);
+      setEmailVerified(true);
+      setCodeMsg({ text: "이메일 인증이 완료됐어요", tone: "ok" });
+    } catch (err) {
+      setCodeMsg({ text: describeError(err), tone: "error" });
+    } finally {
+      setVerifyingCode(false);
     }
   };
 
@@ -160,6 +203,7 @@ function SignupPage({ onNavigate }) {
           setEmail(e.target.value);
           setEmailChecked(false);
           setEmailMsg({ text: "", tone: "" });
+          resetVerification();
         }}
         onBlur={() => setEmailTouched(true)}
         status={
@@ -183,6 +227,49 @@ function SignupPage({ onNavigate }) {
           </Button>
         }
       />
+
+      {emailChecked && (
+        <TextField
+          label="인증코드"
+          placeholder="6자리 숫자"
+          inputMode="numeric"
+          maxLength={6}
+          value={code}
+          disabled={emailVerified}
+          onChange={(e) => setCode(e.target.value.replace(/\D/g, ""))}
+          status={codeMsg.tone === "error" ? "error" : "default"}
+          message={codeMsg.text || undefined}
+          messageTone={codeMsg.tone === "ok" ? "ok" : undefined}
+          action={
+            codeSent && !emailVerified ? (
+              <>
+                <Button
+                  variant="soft"
+                  disabled={code.length !== 6 || verifyingCode}
+                  onClick={handleVerifyCode}
+                >
+                  {verifyingCode ? "확인 중" : "확인"}
+                </Button>
+                <Button
+                  variant="soft"
+                  disabled={sendingCode}
+                  onClick={handleSendCode}
+                >
+                  재발송
+                </Button>
+              </>
+            ) : (
+              <Button
+                variant="soft"
+                disabled={emailVerified || sendingCode}
+                onClick={handleSendCode}
+              >
+                {sendingCode ? "발송 중" : emailVerified ? "완료" : "코드 받기"}
+              </Button>
+            )
+          }
+        />
+      )}
 
       <TextField
         label="비밀번호"
