@@ -3,9 +3,9 @@ import '../styles/components/BottomNav.css'
 const TABS = [
   { key: "home", label: "홈", iconClass: "navIconHome" },
   { key: "classroom", label: "학급", iconClass: "navIconClassroom" },
-  { key: "search", label: "탐색", iconClass: "navIconSearch" },
+  { key: "search", label: "검색", iconClass: "navIconSearch" },
   { key: "create", label: "출제", iconClass: "navIconCreate" },
-  { key: "my", label: "내 활동", iconClass: "navIconMy" },
+  { key: "my", label: "마이페이지", iconClass: "navIconMy" },
 ];
 
 function BottomNav({ active = "home", onSelect }) {

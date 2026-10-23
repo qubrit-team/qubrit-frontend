@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react'
 import MainLayout from '../components/MainLayout'
 import ProgressBar from '../components/ProgressBar'
+import QubritLogo from '../components/QubritLogo'
 import { fetchMe, logout } from '../api/auth'
 import '../styles/HomePage.css'
 
@@ -29,10 +30,13 @@ function HomePage({ onNavigate }) {
     <MainLayout active="home" onNavigate={onNavigate} topBar={false} className="homeScreen">
       <div className="homePage">
         <header className="homeHeader">
-          <button type="button" className="homeBell" aria-label="알림 (새 알림 4개)">
-            <img src="/assets/home/bell.svg" alt="" width="24" height="24" />
-            <span className="homeBellDot" />
-          </button>
+          <div className="homeTopRow">
+            <QubritLogo />
+            <button type="button" className="homeBell" aria-label="알림 (새 알림 4개)">
+              <img src="/assets/home/bell.svg" alt="" width="24" height="24" />
+              <span className="homeBellDot" />
+            </button>
+          </div>
           <h1 className="homeTitle">
             {user.nickname}님, {EXAM.name}까지<br />{EXAM.dDay}일 남았어요
           </h1>

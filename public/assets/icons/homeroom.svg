@@ -1,5 +1,7 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M3 10L12 4L21 10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#6B7380"/>
-<path d="M5 9V20H19V9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#6B7380"/>
-<path d="M10 20V15H14V20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#6B7380"/>
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="ei:pencil">
+<path id="Vector" d="M4.992 21.008L6.292 15.86L14.04 8.112L17.888 11.96L10.14 19.708L4.992 21.008ZM7.228 16.38L6.448 19.552L9.62 18.772L16.432 11.96L14.04 9.568L7.228 16.38Z" fill="#9A9A9A"/>
+<path id="Vector_2" d="M9.256 19.396C8.944 18.096 7.904 17.056 6.604 16.744L6.864 15.756C8.528 16.172 9.828 17.472 10.244 19.136L9.256 19.396Z" fill="#9A9A9A"/>
+<path id="Vector_3" d="M15.235 10.0292L15.9702 10.7645L9.20504 17.5349L8.46976 16.8017L15.235 10.0292ZM5.72 20.28L7.228 19.916C7.072 19.344 6.656 18.928 6.084 18.772L5.72 20.28ZM18.2 11.648L14.352 7.8L15.912 6.24L16.172 6.292C18.044 6.552 19.5 8.008 19.76 9.88L19.812 10.14L18.2 11.648ZM15.808 7.8L18.2 10.192L18.668 9.724C18.408 8.528 17.472 7.592 16.276 7.332L15.808 7.8Z" fill="#9A9A9A"/>
+</g>
 </svg>
