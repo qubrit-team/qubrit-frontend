@@ -1,0 +1,2 @@
+.authSwitch { display: flex; justify-content: center; align-items: center; gap: 8px; font-size: 14px; color: #9a9a9a; }
+.authSwitchLink { font-weight: 600; color: #fff; text-decoration: underline; text-underline-position: from-font; }

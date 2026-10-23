@@ -1,0 +1,2 @@
+.chip { height: 38px; padding: 0 16px; border: 1px solid var(--border); border-radius: 19px; font-size: 14px; color: var(--textMute); }
+.chipOn { background: var(--blueSoft); border-color: var(--blue); color: var(--blue); font-weight: 600; }

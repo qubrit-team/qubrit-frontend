@@ -1,0 +1,9 @@
+.navIcon { width: 24px; height: 24px; background-color: currentColor; -webkit-mask: var(--navIcon) center / contain no-repeat; mask: var(--navIcon) center / contain no-repeat; }
+.navIconHome { --navIcon: url('/assets/icons/home.svg'); }
+.navIconClassroom { --navIcon: url('/assets/icons/homeroom.svg'); }
+.navIconSearch { --navIcon: url('/assets/icons/search.svg'); }
+.navIconCreate { --navIcon: url('/assets/icons/add.svg'); }
+.navIconMy { --navIcon: url('/assets/icons/my.svg'); }
+.bottomNav { position: sticky; bottom: 0; display: flex; padding: 10px 0 18px; background: var(--white); border-top: 1px solid var(--border); }
+.bottomNavItem { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px; font-size: 11px; color: var(--textSub); }
+.bottomNavItem.isActive { color: var(--blue); font-weight: 700; }
