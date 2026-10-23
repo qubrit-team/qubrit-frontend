@@ -1,0 +1,24 @@
+/* 스플래시 (다크 그라데이션 + 중앙 로고) */
+.splashPage {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #000 10.432%, #1d0e31 62.656%, #23004f 100%);
+}
+.splashLogo { display: block; width: 183px; height: 48px; }
+.splashSlogan {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 80px;
+  margin: 0;
+  text-align: center;
+  font-size: 14px;
+  line-height: normal;
+  color: #b8b8b8;
+}

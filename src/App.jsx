@@ -1,4 +1,5 @@
 import { useCallback, useState } from "react";
+import SplashPage from "./pages/SplashPage";
 import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
 import ForgotPasswordPage from "./pages/ForgotPasswordPage";
@@ -9,9 +10,9 @@ import CreatePage from "./pages/CreatePage";
 import MyPage from "./pages/MyPage";
 import SetDetailPage from "./pages/SetDetailPage";
 import SolvePage from "./pages/SolvePage";
-import { getToken } from "./api/http";
 
 const PAGES = {
+  splash: SplashPage,
   login: LoginPage,
   signup: SignupPage,
   forgot: ForgotPasswordPage,
@@ -26,7 +27,7 @@ const PAGES = {
 
 function App() {
   const [route, setRoute] = useState(() => ({
-    page: getToken() ? "home" : "login",
+    page: "splash",
     params: {},
   }));
   const navigate = useCallback(
