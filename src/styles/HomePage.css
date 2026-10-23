@@ -1,0 +1,63 @@
+/* 홈 화면 (다크 테마) */
+.homeScreen { background: #000; --text: #fff; --textSub: #9a9a9a; --border: #262626; }
+.homeScreen .bottomNav { background: #000; border-top-color: #262626; }
+.homeScreen .bottomNavItem { color: #9a9a9a; }
+.homeScreen .bottomNavItem.isActive { color: #fff; }
+.homeScreen .progress { height: 6px; border-radius: 6px; background: #333; }
+.homeScreen .progressFill { border-radius: 6px; background: #fff; }
+
+.homePage { flex: 1; display: flex; flex-direction: column; padding-top: 24px; color: #fff; }
+
+.homePage .homeHeader { display: flex; flex-direction: column; align-items: flex-end; }
+.homePage .homeBell { position: relative; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; margin-right: -10px; }
+.homePage .homeBellDot { position: absolute; top: 10px; right: 11px; width: 7px; height: 7px; border-radius: 50%; background: #fff; }
+.homePage .homeTitle { align-self: stretch; margin-top: 18px; font-size: 24px; font-weight: 600; line-height: 1.5; color: #fff; }
+
+.homePage .resumeCard { margin-top: 28px; padding: 18px; border-radius: 22px; background: #161616; display: flex; flex-direction: column; gap: 21px; }
+.homePage .resumeHead { display: flex; gap: 14px; align-items: center; font-size: 12px; color: #9a9a9a; }
+.homePage .resumeHead b { font-weight: 700; color: #fff; }
+.homePage .resumeRow { display: flex; align-items: center; gap: 12px; margin-top: -12px; }
+.homePage .resumeThumb { width: 44px; height: 44px; border-radius: 14px; object-fit: cover; }
+.homePage .resumeText { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+.homePage .resumeName { font-size: 16px; font-weight: 600; color: #fff; }
+.homePage .resumeMeta { font-size: 13px; color: #9a9a9a; }
+.homePage .resumeBtn { flex-shrink: 0; width: 60px; height: 31px; border-radius: 999px; background: rgba(255, 255, 255, 0.94); font-size: 14px; font-weight: 600; color: #000; }
+
+.homePage .actionGrid,
+.homePage .quickGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; }
+.homePage .actionCard { position: relative; height: 132px; padding: 16px; border-radius: 22px; overflow: hidden; text-align: left; display: flex; flex-direction: column; gap: 4px; padding-top: 38px;
+  background-image: linear-gradient(149deg, rgba(0, 0, 0, 0.2) 21.5%, rgba(105, 0, 150, 0.2) 72.1%, rgba(178, 0, 255, 0.2) 119.9%), linear-gradient(#1e1e1e, #1e1e1e); }
+.homePage .actionTitle { font-size: 17px; font-weight: 700; color: #fff; }
+.homePage .actionDesc { font-size: 12px; color: #ccc; white-space: nowrap; }
+.homePage .actionImg { position: absolute; left: 55%; top: 42%; width: 67px; height: 68px; overflow: hidden; pointer-events: none; }
+.homePage .actionImg img { position: absolute; max-width: none; }
+.homePage .actionImgSolve img { width: 498.04%; height: 326.69%; left: -310.46%; top: -29.26%; }
+.homePage .actionImgCreate img { width: 111.94%; height: 110.29%; left: -5.58%; top: -5.88%; }
+
+.homePage .quickLink { display: flex; align-items: center; gap: 10px; height: 60px; padding: 0 13px; border-radius: 18px; background: #161616; font-size: 15px; font-weight: 700; color: #fff; }
+.homePage .quickIcon { flex-shrink: 0; width: 38px; height: 38px; border-radius: 12px; background: #000; }
+
+.homePage .homeSection { margin-top: 32px; display: flex; flex-direction: column; gap: 24px; }
+.homePage .homeSectionLast { padding-bottom: 32px; }
+.homePage .sectionHead { display: flex; justify-content: space-between; align-items: center; }
+.homePage .sectionTitle { font-size: 19px; font-weight: 700; letter-spacing: -0.3px; color: #fff; }
+.homePage .sectionMore { font-size: 14px; font-weight: 600; color: #fff; }
+
+.homePage .feedList { display: flex; flex-direction: column; gap: 18px; }
+.homePage .feedRow { display: flex; align-items: center; gap: 12px; text-align: left; color: #fff; }
+.homePage .feedBody { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 6px; }
+.homePage .feedTitle { font-size: 16px; font-weight: 700; }
+.homePage .feedTitleNotice { font-size: 15px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.homePage .feedMeta { font-size: 13px; color: #9a9a9a; }
+.homePage .feedMeta b { font-weight: 700; color: #fff; }
+.homePage .feedDday { flex-shrink: 0; font-size: 14px; font-weight: 700; }
+.homePage .dateBadge { position: relative; flex-shrink: 0; width: 48px; height: 48px; border-radius: 14px; background: #2b2b2b; display: flex; flex-direction: column; align-items: center; justify-content: center; font-weight: 700; }
+.homePage .dateBadge span { font-size: 11px; line-height: 12px; }
+.homePage .dateBadge b { font-size: 18px; line-height: 20px; }
+.homePage .noticeBadge { flex-shrink: 0; width: 48px; height: 48px; border-radius: 14px; background: #1e1e1e; display: flex; align-items: center; justify-content: center; }
+
+.homePage .popularGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.homePage .popularCard { position: relative; height: 162px; padding: 14px; border: 1px solid #333; border-radius: 20px; text-align: left; display: flex; flex-direction: column; color: #fff; }
+.homePage .popularThumb { width: 44px; height: 44px; border-radius: 14px; background: #1e1e1e; }
+.homePage .popularTitle { flex: 1; display: flex; flex-direction: column; justify-content: center; font-size: 15px; font-weight: 700; line-height: 20px; }
+.homePage .popularMeta { font-size: 12px; color: #9a9a9a; white-space: nowrap; }
