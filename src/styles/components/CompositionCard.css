@@ -1,0 +1,13 @@
+.compositionCard { padding: 18px; border-radius: 20px; background: #161616; }
+.compositionHead { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 14px; }
+.compositionHead h2 { font-size: 16px; font-weight: 800; color: #fff; }
+.compositionHead span { font-size: 13px; color: #9a9a9a; }
+.compositionRows { display: flex; flex-direction: column; gap: 14px; list-style: none; }
+.compositionRows li { display: flex; align-items: center; gap: 12px; }
+.compositionLabel { width: 90px; flex-shrink: 0; font-size: 14px; color: #ccc; }
+.compositionBar { flex: 1; height: 8px; border-radius: 8px; background: #262626; overflow: hidden; }
+.compositionBar span { display: block; height: 100%; border-radius: 8px; background: #7a45d8; }
+.compositionRows b { width: 20px; text-align: right; font-size: 14px; font-weight: 700; color: #fff; }
+.compositionPreview { margin-top: 18px; padding: 14px; border-radius: 14px; background: #000; }
+.compositionPreviewTitle { margin-bottom: 8px; font-size: 12px; font-weight: 800; color: #fff; }
+.compositionPreviewBody { font-size: 14px; line-height: 1.5; color: #ccc; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; }

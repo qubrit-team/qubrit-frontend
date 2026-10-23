@@ -95,7 +95,7 @@ function SearchPage({ onNavigate }) {
             <SetListItem
               key={set.id}
               set={set}
-              onClick={() => onNavigate('solve', { setId: set.id, from: 'search' })}
+              onClick={() => onNavigate('setDetail', { setId: set.id, from: 'search' })}
             />
           ))}
         </ul>
