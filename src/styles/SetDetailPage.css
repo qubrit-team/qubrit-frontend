@@ -1,0 +1,8 @@
+.setDetailPage { background: #000; padding-top: 56px; padding-bottom: 0; gap: 0; }
+.setDetailPage .setDetailStats { margin-top: 32px; }
+.setDetailPage .compositionCard { margin-top: 32px; }
+.setDetailPage .ownerRow { margin-top: 32px; }
+.setDetailPage .setDetailLock { display: flex; align-items: center; gap: 8px; margin-top: 24px; font-size: 13px; color: #9a9a9a; }
+.setDetailPage .setDetailToast { margin-top: 12px; font-size: 13px; color: #7a45d8; }
+.setDetailPage .setDetailMessage { margin: auto; text-align: center; font-size: 14px; color: #9a9a9a; }
+.setDetailPage .setDetailMessage button { display: block; margin: 16px auto 0; color: #7a45d8; font-weight: 600; }

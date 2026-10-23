@@ -1,0 +1,3 @@
+.activityTabs { display: flex; gap: 22px; }
+.activityTab { height: 44px; min-width: 32px; font-size: 16px; font-weight: 600; color: #9a9a9a; border-bottom: 1px solid transparent; }
+.activityTab.isOn { font-weight: 800; color: #fff; border-bottom-color: #fff; }

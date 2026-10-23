@@ -1,0 +1,17 @@
+.field { margin-top: 24px; }
+.fieldLabel { display: block; margin-bottom: 8px; font-size: 14px; font-weight: 600; color: var(--textMute); }
+.fieldLabel small { font-weight: 400; color: var(--textSub); }
+.fieldRow { display: flex; gap: 8px; }
+.fieldBox {
+  flex: 1; position: relative; display: flex; align-items: center;
+  height: 52px; padding: 0 18px;
+  border: 1px solid var(--border); border-radius: 16px; background: var(--white);
+}
+.fieldBox:focus-within { border-color: var(--blue); }
+.fieldError .fieldBox { border-color: var(--error); }
+.fieldInput { flex: 1; min-width: 0; height: 100%; border: 0; outline: 0; background: transparent; font-size: 16px; }
+.fieldInput::placeholder { color: #9aa1ac; }
+.fieldSide { margin-left: 8px; display: flex; color: var(--textSub); }
+.fieldMsg { margin: 8px 0 0 4px; font-size: 12px; color: var(--textSub); }
+.fieldMsgOk { color: var(--blue); }
+.fieldMsgError { color: var(--error); }

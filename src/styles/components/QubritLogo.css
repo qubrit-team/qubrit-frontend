@@ -1,0 +1,3 @@
+.qubritLogo { position: relative; display: block; align-self: flex-start; width: 114px; height: 27px; }
+.qubritLogo img { display: block; }
+.qubritLogoDot { position: absolute; left: 107px; top: 18px; width: 6.4px; height: 6.4px; background: #9747ff; transform: rotate(45deg); }

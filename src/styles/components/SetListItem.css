@@ -1,0 +1,7 @@
+.setItem { display: flex; align-items: center; gap: 12px; width: 100%; padding: 16px; border: 1px solid #333; border-radius: 20px; text-align: left; }
+.setItemThumb { flex-shrink: 0; display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 14px; background: #1e1e1e; }
+.setItemThumb img { width: 32px; height: 32px; object-fit: contain; }
+.setItemBody { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 6px; }
+.setItemSubject { font-size: 12px; font-weight: 500; color: #fff; }
+.setItemTitle { font-size: 16px; font-weight: 700; color: #fff; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.setItemMeta { font-size: 13px; color: #9a9a9a; }

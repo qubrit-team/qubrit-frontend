@@ -1,0 +1,15 @@
+.searchPage { flex: 1; display: flex; flex-direction: column; padding: 56px 1px 24px; }
+.searchPage .searchTitle { margin-bottom: 14px; font-size: 22px; font-weight: 700; letter-spacing: -0.6px; color: #fff; }
+
+.searchPage .filterBar { margin-top: 14px; }
+
+.searchPage .resultHeader { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; }
+.searchPage .resultTitle { font-size: 18px; font-weight: 600; color: #fff; }
+
+.searchPage .searchEmpty, .searchPage .searchError { margin-top: 48px; text-align: center; font-size: 14px; color: #9a9a9a; }
+.searchPage .searchError { color: #ff6b5e; }
+
+.searchPage .setList { display: flex; flex-direction: column; gap: 10px; list-style: none; margin-top: 16px; }
+
+.searchPage .moreButton { align-self: center; margin: 16px 0 8px; padding: 10px 20px; border-radius: 20px; background: #161616; font-size: 14px; color: #ccc; }
+.searchPage .moreButton:disabled { opacity: 0.5; cursor: default; }

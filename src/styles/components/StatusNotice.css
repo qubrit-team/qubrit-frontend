@@ -1,0 +1,3 @@
+.statusNotice { display: flex; flex-direction: column; align-items: center; text-align: center; }
+.statusNoticeTitle { margin-top: 18px; font-size: 18px; font-weight: 800; color: #fff; }
+.statusNoticeDesc { margin-top: 14px; display: flex; flex-direction: column; font-size: 14px; line-height: 1.6; color: #9a9a9a; }

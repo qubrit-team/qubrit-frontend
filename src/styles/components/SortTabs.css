@@ -1,0 +1,4 @@
+.sortTabs { display: flex; gap: 14px; }
+.sortTab { font-size: 14px; color: #9a9a9a; }
+.sortTab.isOn { font-weight: 600; color: #fff; }
+.sortTab:disabled { cursor: default; }

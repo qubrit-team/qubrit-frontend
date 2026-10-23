@@ -1,0 +1,8 @@
+.screenMain { padding: 0; }
+.mainContent { flex: 1; display: flex; flex-direction: column; padding: 0 24px; }
+
+/* 다크 화면 (하단 내비게이션 포함) */
+.screenDark { background: #000; }
+.screenDark .bottomNav { background: #000; border-top-color: #262626; }
+.screenDark .bottomNavItem { color: #9a9a9a; }
+.screenDark .bottomNavItem.isActive { color: #fff; }
