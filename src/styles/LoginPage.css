@@ -1,0 +1,28 @@
+/* 로그인 (다크 테마) */
+.loginPage { background: #000; color: #fff; padding: 64px 20px 0; --text: #fff; --textStrong: #fff; --textSub: #9a9a9a; --textMute: #ccc; --border: #333; }
+.loginPage .loginTitle { margin-top: 24px; font-size: 26px; font-weight: 600; line-height: 1.5; letter-spacing: -0.6px; color: #fff; }
+.loginPage .loginRole { margin-top: 22px; }
+
+.loginPage .field { margin-top: 18px; }
+.loginPage .loginEmailField { margin-top: 22px; }
+.loginPage .fieldLabel { color: #ccc; }
+.loginPage .fieldBox { height: 54px; border-color: #333; background: #000; }
+.loginPage .fieldBox:focus-within,
+.loginPage .fieldError .fieldBox { border-color: #fff; }
+.loginPage .fieldInput { color: #fff; }
+.loginPage .fieldMsg,
+.loginPage .fieldMsgError { margin-left: 0; font-size: 13px; color: #fff; }
+
+.loginPage .autoLoginRow { display: flex; align-items: center; justify-content: space-between; margin-top: 30px; padding: 0 4px; }
+.loginPage .check { font-size: 15px; color: #ccc; gap: 6px; }
+.loginPage .checkLeft { gap: 6px; }
+.loginPage .checkBox { border-color: #666; background: #000; }
+.loginPage .checkInput:checked + .checkBox { background: #fff; border-color: #fff; }
+.loginPage .checkMark { background-color: #000; }
+.loginPage .forgotLink { font-size: 14px; color: #9a9a9a; }
+
+.loginPage .loginSpacer { min-height: 120px; }
+.loginPage .loginFooter { position: sticky; bottom: 0; display: flex; flex-direction: column; gap: 20px; margin: 0 -20px; padding: 12px 20px 32px; background: #000; }
+.loginPage .loginFormError { margin: 0; text-align: center; }
+.loginPage .btnPrimary { background: #9d51ff; color: #000; }
+.loginPage .btnPrimary:disabled { opacity: 0.4; }
