@@ -1,0 +1,44 @@
+.filterSheetRoot { position: fixed; inset: 0; z-index: 100; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; }
+.filterSheetBackdrop { position: absolute; inset: 0; background: rgba(0, 0, 0, 0.6); animation: filterFade 0.25s ease-out; transition: opacity 0.25s; }
+.filterSheetBackdrop.isClosing { opacity: 0; }
+.filterSheet { position: relative; width: 100%; max-width: 420px; padding: 0 24px 34px; border-radius: 28px 28px 0 0; background: #1c1c1c; color: #fff; animation: filterSlideUp 0.3s cubic-bezier(0.32, 0.72, 0, 1); transition: transform 0.25s cubic-bezier(0.32, 0.72, 0, 1); }
+.filterSheet.isDragging { transition: none; }
+@keyframes filterSlideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
+@keyframes filterFade { from { opacity: 0; } to { opacity: 1; } }
+
+.filterSheetGrab { touch-action: none; cursor: grab; }
+.filterSheet.isDragging .filterSheetGrab { cursor: grabbing; }
+.filterSheetHandle { width: 40px; height: 4px; margin: 10px auto 0; border-radius: 4px; background: #3d3d3d; }
+.filterSheetHeader { display: flex; align-items: center; justify-content: space-between; margin-top: 18px; }
+.filterSheetHeader h2 { font-size: 22px; font-weight: 700; }
+.filterSheetHeader button { display: flex; align-items: center; justify-content: center; width: 22px; height: 22px; }
+
+.filterGroup { border: 0; margin-top: 28px; }
+.filterGroup legend, .filterGroupTitle { display: block; padding: 0; margin-bottom: 14px; font-size: 16px; font-weight: 700; }
+
+.filterDifficulty { display: flex; gap: 8px; }
+.filterPill { flex: 1; height: 44px; border: 1px solid #333; border-radius: 999px; font-size: 15px; color: #ccc; }
+.filterPill.isOn { border-color: #7a45d8; background: #24183a; font-weight: 700; color: #fff; }
+
+.filterTrustRow { display: flex; align-items: center; justify-content: space-between; margin: -2px 3px 14px; }
+.filterTrustRow span { font-size: 14px; color: #9a9a9a; }
+.filterTrustRow b { font-size: 22px; font-weight: 700; }
+.filterRange { width: 100%; height: 28px; appearance: none; -webkit-appearance: none; background: transparent; cursor: pointer; }
+.filterRange::-webkit-slider-runnable-track { height: 4px; border-radius: 4px; background: linear-gradient(to right, #7a45d8 var(--fill), #787878 var(--fill)); }
+.filterRange::-moz-range-track { height: 4px; border-radius: 4px; background: linear-gradient(to right, #7a45d8 var(--fill), #787878 var(--fill)); }
+.filterRange::-webkit-slider-thumb { -webkit-appearance: none; width: 28px; height: 28px; margin-top: -12px; border: 0; border-radius: 50%; background: #7a45d8; box-shadow: 0 2px 8px rgba(17, 20, 24, 0.2); }
+.filterRange::-moz-range-thumb { width: 28px; height: 28px; border: 0; border-radius: 50%; background: #7a45d8; box-shadow: 0 2px 8px rgba(17, 20, 24, 0.2); }
+
+.filterTags { display: flex; flex-wrap: wrap; gap: 8px; }
+.filterTag { height: 38px; padding: 0 16px; border: 1px solid #333; border-radius: 999px; font-size: 14px; font-weight: 500; color: #ccc; }
+.filterTag.isOn { border-color: #fff; background: #1e1e1e; font-weight: 600; color: #fff; }
+
+.filterSwitchRow { display: flex; align-items: center; justify-content: space-between; margin-top: 30px; font-size: 16px; font-weight: 600; }
+.filterSwitch { position: relative; width: 50px; height: 30px; border-radius: 999px; background: #3d3d3d; transition: background 0.2s; }
+.filterSwitch::after { content: ''; position: absolute; top: 3px; left: 3px; width: 24px; height: 24px; border-radius: 50%; background: #fff; transition: transform 0.2s; }
+.filterSwitch[aria-checked='true'] { background: #7a45d8; }
+.filterSwitch[aria-checked='true']::after { transform: translateX(20px); }
+
+.filterSheetFooter { display: flex; gap: 10px; margin-top: 40px; }
+.filterReset { width: 92px; height: 56px; border-radius: 999px; background: #161616; font-size: 15px; font-weight: 700; color: #fff; }
+.filterApply { flex: 1; height: 56px; border-radius: 999px; background: #7a45d8; font-size: 16px; font-weight: 700; color: #000; }
