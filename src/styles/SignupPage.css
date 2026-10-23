@@ -1,0 +1,58 @@
+/* 회원가입 (다크 테마) */
+.signupPage { background: #000; color: #fff; padding-bottom: 0; --text: #fff; --textStrong: #fff; --textSub: #9a9a9a; --textMute: #ccc; --border: #333; }
+.signupPage .signupTop { display: flex; align-items: center; justify-content: space-between; margin-top: 20px; margin-bottom: 20px; }
+.signupPage .backButton { margin: 0 0 0 -4px; }
+.signupPage .signupStep { font-size: 14px; font-weight: 700; color: #9a9a9a; }
+.signupPage .screenTitle { font-size: 24px; font-weight: 600; line-height: 1.46; letter-spacing: -0.6px; color: #fff; }
+
+.signupPage .field { margin-top: 20px; }
+.signupPage .fieldLabel { margin-bottom: 8px; font-size: 14px; color: #ccc; }
+.signupPage .fieldRow { gap: 6px; }
+.signupPage .fieldBox { height: 54px; border-color: #333; background: #000; }
+.signupPage .fieldBox:focus-within { border-color: #fff; }
+.signupPage .fieldError .fieldBox { border-color: #fff; }
+.signupPage .fieldInput { color: #fff; }
+.signupPage .fieldInput::placeholder { color: #9a9a9a; }
+.signupPage .fieldMsg { margin: 7px 0 0 0; font-size: 13px; color: #9a9a9a; }
+.signupPage .fieldMsgOk { color: #fff; }
+.signupPage .fieldMsgError { color: #9a9a9a; }
+.signupPage .btnSoft { width: 88px; height: 54px; padding: 0; font-weight: 600; background: #1e1e1e; color: #fff; }
+.signupPage .btnSoft:disabled { opacity: 0.5; }
+.signupPage .rules { margin: 8px 0 0 0; gap: 20px; font-size: 13px; color: #9a9a9a; }
+.signupPage .rulesItemOk { color: #fff; }
+
+.signupPage .roleCards { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.signupPage .roleCard { position: relative; display: flex; flex-direction: column; align-items: flex-start; min-height: 165px; padding: 17px 16px 16px; border: 1px solid #333; border-radius: 20px; background: #191919; text-align: left; }
+.signupPage .roleCardOn { border-color: #ba70ff; }
+.signupPage .roleIcon { margin: 0 0 14px 1px; }
+.signupPage .roleTitle { margin-bottom: 5px; font-size: 17px; font-weight: 700; color: #fff; }
+.signupPage .roleDesc { display: flex; flex-direction: column; font-size: 13px; line-height: 1.45; color: #9a9a9a; }
+.signupPage .roleCardOn .roleDesc { color: #8e8e8e; }
+.signupPage .roleBadge { position: absolute; top: 12px; right: 12px; width: 22px; height: 22px; border-radius: 11px; background: rgba(151, 71, 255, 0.78); display: flex; align-items: center; justify-content: center; }
+
+.signupPage .subjectChips { display: flex; flex-wrap: wrap; gap: 8px; }
+.signupPage .termsRow { display: flex; align-items: center; justify-content: space-between; margin-top: 28px; }
+.signupPage .checkStrong { font-size: 15px; color: #fff; }
+.signupPage .checkBox { border-color: #666; background: #000; }
+.signupPage .checkInput:checked + .checkBox { background: #fff; border-color: #fff; }
+.signupPage .checkMark { background-color: #000; }
+.signupPage .termsOpen { display: flex; padding: 6px; margin-right: -6px; }
+.signupPage .signupSpacer { min-height: 28px; }
+
+.signupPage .signupFooter { position: sticky; bottom: 0; margin: 0 -24px; padding: 12px 24px 34px; background: #000; }
+.signupPage .signupFormError { margin: 0 0 8px; text-align: center; }
+.signupPage .btnPrimary { background: #9d51ff; color: #000; font-weight: 600; }
+.signupPage .btnPrimary:disabled { opacity: 0.4; }
+
+.signupPage .termsView { position: fixed; inset: 0; z-index: 30; display: flex; flex-direction: column; max-width: 420px; margin: 0 auto; background: var(--white); }
+.signupPage .termsScroll { flex: 1; overflow-y: auto; padding: 24px 24px 16px; }
+.signupPage .termsDate { margin-top: 8px; font-size: 13px; color: var(--textSub); }
+.signupPage .termsSection { margin-top: 28px; font-size: 14px; line-height: 1.7; color: var(--textMute); }
+.signupPage .termsSection h2 { margin-bottom: 8px; font-size: 18px; font-weight: 700; color: var(--text); }
+.signupPage .termsSection h3 { margin-top: 18px; margin-bottom: 4px; font-size: 14px; font-weight: 700; color: var(--textStrong); }
+.signupPage .termsSection ul { padding-left: 18px; }
+.signupPage .termsSection li { margin-top: 2px; }
+.signupPage .termsTable { width: 100%; margin: 8px 0 12px; border-collapse: collapse; font-size: 13px; }
+.signupPage .termsTable th, .signupPage .termsTable td { padding: 10px 12px; border: 1px solid var(--border); text-align: left; vertical-align: top; }
+.signupPage .termsTable th { width: 84px; background: #f3f4f6; color: var(--textStrong); }
+.signupPage .termsFooter { padding: 12px 24px 24px; border-top: 1px solid var(--border); }
