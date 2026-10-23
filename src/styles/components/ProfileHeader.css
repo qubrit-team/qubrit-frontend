@@ -1,0 +1,5 @@
+.profileHeader { display: flex; align-items: center; gap: 13px; }
+.profileAvatar { flex-shrink: 0; display: flex; align-items: center; justify-content: center; width: 64px; height: 64px; border-radius: 50%; background: #1e1e1e; font-size: 24px; font-weight: 800; color: #fff; }
+.profileText { min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.profileName { margin-bottom: 4px; font-size: 20px; font-weight: 700; color: #fff; }
+.profileLine { font-size: 13px; line-height: 1.45; color: #9a9a9a; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
