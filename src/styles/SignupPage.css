@@ -24,8 +24,12 @@
 .signupPage .roleCards { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .signupPage .roleCard { position: relative; display: flex; flex-direction: column; align-items: flex-start; min-height: 165px; padding: 17px 16px 16px; border: 1px solid #333; border-radius: 20px; background: #191919; text-align: left; }
 .signupPage .roleCardOn { border-color: #ba70ff; }
-.signupPage .roleIcon { margin: 0 0 14px 1px; }
-.signupPage .roleTitle { margin-bottom: 5px; font-size: 17px; font-weight: 700; color: #fff; }
+.signupPage .roleCard { min-height: 164.69px; padding: 81px 16px 16px; overflow: hidden; }
+.signupPage .roleIcon { position: absolute; top: 21px; right: 21px; pointer-events: none; filter: grayscale(1) opacity(0.6); transition: filter 0.15s; }
+.signupPage .roleIcon-student { top: 24px; right: 29px; }
+.signupPage .roleCardOn .roleIcon { filter: none; }
+.signupPage .roleTitle { margin-bottom: 5px; font-size: 17px; font-weight: 600; color: #8c8c8c; }
+.signupPage .roleCardOn .roleTitle { color: #9d51ff; }
 .signupPage .roleDesc { display: flex; flex-direction: column; font-size: 13px; line-height: 1.45; color: #9a9a9a; }
 .signupPage .roleCardOn .roleDesc { color: #8e8e8e; }
 .signupPage .roleBadge { position: absolute; top: 12px; right: 12px; width: 22px; height: 22px; border-radius: 11px; background: rgba(151, 71, 255, 0.78); display: flex; align-items: center; justify-content: center; }

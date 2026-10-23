@@ -16,13 +16,13 @@ const ROLES = [
     key: "student",
     title: "학생",
     desc: ["문제를 풀고 만들고", "학급에 참여해요"],
-    icon: "/assets/signup/pencil.svg",
+    icon: "/assets/signup/role-student.svg",
   },
   {
     key: "teacher",
     title: "선생님",
     desc: ["학급·자료·일정 관리", "학교 인증 필요"],
-    icon: "/assets/signup/school.svg",
+    icon: "/assets/signup/role-teacher.svg",
   },
 ];
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -167,12 +167,13 @@ function SignupPage({ onNavigate }) {
               className={`roleCard ${role === r.key ? "roleCardOn" : ""}`}
               onClick={() => setRole(r.key)}
             >
+              {/* 선택됐을 때만 컬러, 아니면 회색 */}
               <img
-                className="roleIcon"
+                className={`roleIcon roleIcon-${r.key}`}
                 src={r.icon}
                 alt=""
-                width="49"
-                height="49"
+                width="71"
+                height="84"
               />
               <span className="roleTitle">{r.title}</span>
               <span className="roleDesc">
