@@ -1,0 +1,7 @@
+.selectField { flex: 1; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.selectFieldLabel { font-size: 16px; font-weight: 700; color: #fff; }
+.selectFieldBox {
+  height: 54px; padding: 0 20px; border: 1px solid #333; border-radius: 16px;
+  background: #000; color: #fff; font-size: 16px; appearance: none; cursor: pointer;
+}
+.selectFieldBox:focus { outline: none; border-color: #9355f6; }

@@ -1,0 +1,5 @@
+.subjectAdderBtn { height: 38px; padding: 0 16px; border: 1px dashed #666; border-radius: 19px; font-size: 14px; color: #ccc; }
+.subjectAdderBtn:disabled { opacity: 0.5; cursor: default; }
+.subjectAdderForm { display: inline-flex; align-items: center; gap: 6px; }
+.subjectAdderInput { width: 120px; height: 38px; padding: 0 14px; border: 1px solid #9355f6; border-radius: 19px; background: #000; color: #fff; font-size: 14px; outline: none; }
+.subjectAdderOk { height: 38px; padding: 0 14px; border-radius: 19px; background: #9355f6; color: #000; font-size: 14px; font-weight: 700; }
