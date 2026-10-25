@@ -1,0 +1,5 @@
+.resultSummary { display: flex; flex-direction: column; gap: 7px; }
+.resultSummaryClose { display: flex; width: 22px; height: 22px; }
+.resultSummaryRow { display: flex; justify-content: space-between; align-items: flex-end; }
+.resultSummarySet { margin-bottom: 5px; font-size: 14px; font-weight: 500; color: #9a9a9a; }
+.resultSummaryTitle { font-size: 26px; font-weight: 600; line-height: 1.3; letter-spacing: -0.6px; color: #fff; }

@@ -1,0 +1,14 @@
+.quizResult { padding-top: 68px; padding-bottom: 24px; background: #000; color: #fff; }
+.quizResult .resultStats { display: flex; justify-content: center; gap: 43px; margin-top: 24px; }
+.quizResult .resultActionRow { display: flex; gap: 12px; margin-top: 24px; }
+.quizResult .resultActionRow > * { flex: 1; }
+.quizResult .resultSectionHead { display: flex; justify-content: space-between; align-items: center; margin-top: 28px; }
+.quizResult .resultSectionTitle { font-size: 18px; font-weight: 800; }
+.quizResult .resultSectionNote { font-size: 13px; color: #9a9a9a; }
+.quizResult .resultSectionNote strong { font-weight: 700; color: #fff; }
+.quizResult .wrongAnswerCard { margin-top: 28px; }
+.quizResult .recommendCard { margin-top: 24px; }
+.quizResult .resultBar { display: flex; gap: 12px; margin: 24px -0px 0; }
+.quizResult .resultBarSecondary, .quizResult .resultBarPrimary { flex: 1; height: 56px; border-radius: 999px; font-size: 15px; font-weight: 700; }
+.quizResult .resultBarSecondary { background: #161616; color: #fff; }
+.quizResult .resultBarPrimary { background: #9355f6; color: #000; }
