@@ -1,0 +1,15 @@
+.createClassroomPage { width: 100%; max-width: 420px; min-height: 100vh; margin: 0 auto; display: flex; flex-direction: column; background: #000; color: #fff; }
+.createClassroomBody { flex: 1; padding: 56px 24px 24px; display: flex; flex-direction: column; gap: 32px; }
+.createClassroomTitle { font-size: 24px; font-weight: 700; line-height: 1.46; letter-spacing: -0.6px; }
+.createClassroomRow { display: flex; gap: 16px; }
+.createClassroomInput { height: 54px; padding: 0 18px; border: 1px solid #333; border-radius: 16px; background: #000; color: #fff; font-size: 16px; }
+.createClassroomInput::placeholder { color: #666; }
+.createClassroomInput:focus { outline: none; border-color: #9355f6; }
+.createClassroomChips { display: flex; flex-wrap: wrap; gap: 8px; }
+.createClassroomPage .chip { background: #000; border-color: #333; color: #ccc; }
+.createClassroomPage .chipOn { background: rgba(186, 112, 255, 0.2); border-color: #9355f6; color: #fff; }
+.createClassroomJoin { gap: 0; }
+.createClassroomJoin .formSectionLabel { margin-bottom: 6px; }
+.createClassroomError { font-size: 13px; color: #ff6b5b; }
+.createClassroomFooter { position: sticky; bottom: 0; padding: 12px 24px 34px; background: #000; }
+.createClassroomPage .btnPrimary { background: #9355f6; color: #000; }

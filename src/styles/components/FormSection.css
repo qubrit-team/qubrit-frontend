@@ -1,0 +1,4 @@
+.formSection { display: flex; flex-direction: column; gap: 12px; border: 0; min-width: 0; }
+.formSectionLabel { display: flex; align-items: baseline; gap: 6px; font-size: 16px; font-weight: 700; color: #fff; }
+.formSectionLabel small { font-size: 13px; font-weight: 400; color: #9a9a9a; }
+.formSectionDesc { margin-top: -2px; font-size: 13px; color: #9a9a9a; }

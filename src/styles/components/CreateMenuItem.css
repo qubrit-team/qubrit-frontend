@@ -1,0 +1,5 @@
+.createMenuItem { display: flex; align-items: center; gap: 14px; width: 100%; height: 76px; text-align: left; color: #fff; }
+.createMenuIcon { flex-shrink: 0; display: flex; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: 16px; background: #1e1e1e; }
+.createMenuText { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 6px; }
+.createMenuTitle { font-size: 16px; font-weight: 700; }
+.createMenuDesc { font-size: 13px; color: #9a9a9a; }
