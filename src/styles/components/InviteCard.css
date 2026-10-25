@@ -1,0 +1,11 @@
+.inviteCard { display: flex; flex-direction: column; gap: 14px; padding: 15px 16px 16px 15px; border-radius: 20px; background: #1e1e1e; color: #fff; }
+.inviteCardHead { display: flex; align-items: center; gap: 12px; }
+.inviteCardThumb { flex-shrink: 0; width: 50px; height: 50px; object-fit: contain; }
+.inviteCardText { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+.inviteCardTitle { font-size: 15px; font-weight: 700; line-height: 21.75px; word-break: keep-all; }
+.inviteCardMeta { font-size: 13px; color: #b3b3b3; }
+.inviteCardActions { display: grid; grid-template-columns: 124px 1fr; gap: 8px; margin-left: 1px; }
+.inviteCardActions button { height: 44px; border-radius: 999px; font-size: 14px; font-weight: 700; }
+.inviteCardActions button:disabled { opacity: 0.5; cursor: default; }
+.inviteDecline { background: #000; color: #fff; }
+.inviteAccept { background: #9355f6; color: #000; }
