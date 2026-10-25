@@ -1,0 +1,6 @@
+.recommendCard { display: flex; align-items: center; gap: 12px; width: 100%; padding: 0 16px; height: 88px; border: 1px solid #9355f6; border-radius: 20px; text-align: left; color: #fff; }
+.recommendIcon { display: flex; align-items: center; justify-content: center; flex-shrink: 0; width: 44px; height: 44px; border-radius: 14px; background: #1e1e1e; }
+.recommendBody { display: flex; flex-direction: column; flex: 1; gap: 3px; min-width: 0; }
+.recommendLabel { font-size: 12px; font-weight: 500; }
+.recommendTitle { font-size: 15px; font-weight: 600; }
+.recommendDesc { font-size: 12px; font-weight: 500; color: #9a9a9a; }
