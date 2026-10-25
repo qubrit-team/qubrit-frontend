@@ -1,0 +1,2 @@
+.joinCodeButton { display: block; width: 100%; height: 52px; border-radius: 999px; background: #161616; font-size: 15px; font-weight: 700; color: #fff; }
+.joinCodeButton:disabled { opacity: 0.4; cursor: default; }

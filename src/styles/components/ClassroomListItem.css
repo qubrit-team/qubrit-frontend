@@ -1,0 +1,8 @@
+.classroomItem { display: flex; align-items: center; gap: 14px; width: 100%; padding: 0; text-align: left; color: #fff; }
+.classroomItemThumb { flex-shrink: 0; display: flex; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: 16px; background: #1e1e1e; }
+.classroomItemThumb img { width: 36px; height: 36px; object-fit: contain; }
+.classroomItemBody { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 6px; }
+.classroomItemName { font-size: 16px; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.classroomItemMeta { font-size: 13px; color: #9a9a9a; }
+.classroomBadge { flex-shrink: 0; display: flex; align-items: center; height: 26px; padding: 0 12px; border-radius: 999px; background: #9355f6; font-size: 12px; font-weight: 700; color: #000; }
+.classroomDday { flex-shrink: 0; font-size: 13px; font-weight: 600; color: #fff; }

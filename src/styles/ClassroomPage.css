@@ -1,0 +1,10 @@
+/* 학급 (다크 테마) */
+.classroomPage { flex: 1; display: flex; flex-direction: column; padding: 56px 0 24px; color: #fff; }
+.classroomTitle { margin-bottom: 18px; font-size: 22px; font-weight: 700; letter-spacing: -0.6px; color: #fff; }
+.inviteList { display: flex; flex-direction: column; gap: 10px; margin-bottom: 26px; }
+.classroomSection { margin-bottom: 24px; font-size: 19px; font-weight: 700; color: #fff; }
+.classroomList { display: flex; flex-direction: column; gap: 24px; list-style: none; padding: 0 1px; }
+.classroomNotice { margin-bottom: 24px; text-align: center; font-size: 14px; color: #9a9a9a; }
+.classroomError { color: #ff6b5e; }
+.classroomActions { display: flex; gap: 10px; margin-top: 70px; }
+.classroomActions > * { flex: 1; min-width: 0; }
