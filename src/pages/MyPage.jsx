@@ -110,7 +110,7 @@ function MyPage({ onNavigate }) {
       title={a.setTitle}
       meta={`${a.subject} · ${a.answeredCount}/${a.total}문항`}
       status={ATTEMPT_LABEL[a.status]}
-      onClick={() => onNavigate('solve', { setId: a.setId })}
+      onClick={() => onNavigate('setDetail', { setId: a.setId, from: 'my' })}
     />
   ))
   const list = tab === 'created' ? created : solved
@@ -122,7 +122,7 @@ function MyPage({ onNavigate }) {
         <ProfileHeader name={me.nickname} lines={[me.email]} />
         <StatsSummary items={stats} />
         <div className="myShortcuts">
-          <ShortcutCard icon="/assets/my/note.svg" title="오답 노트" sub={`복습할 문제 ${home.unresolvedWrong}`} />
+          <ShortcutCard icon="/assets/my/note.svg" title="오답 노트" sub={`복습할 문제 ${home.wrongNoteCount}`} onClick={() => onNavigate('wrongNotes')} />
           <ShortcutCard icon="/assets/my/analysis.svg" title="학습 분석" sub={accuracy === null ? '아직 기록이 없어요' : `정답률 ${accuracy}%`} />
           <ShortcutCard icon="/assets/my/interview.svg" title="면접 기록" sub="준비 중" />
         </div>
