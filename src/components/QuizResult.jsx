@@ -1,40 +1,80 @@
-import Button from './Button'
+import { useState } from 'react'
+import ResultSummary from './ResultSummary'
+import ResultStat from './ResultStat'
+import ResultActionButton from './ResultActionButton'
+import QuestionResultGrid from './QuestionResultGrid'
+import WrongAnswerCard from './WrongAnswerCard'
+import RecommendCard from './RecommendCard'
+import { formatElapsed } from '../utils/time'
+import '../styles/QuizResult.css'
 
-// 풀이 종료 후 결과: 점수와 문제별 정답/해설
-function QuizResult({ attempt, questions, onHome, onSearch }) {
+const answerLabel = (q, a) => {
+  if (!a) return ''
+  if (a.selectedChoiceId != null) {
+    const i = q.choices.findIndex((c) => c.id === a.selectedChoiceId)
+    return i === -1 ? '' : `${'①②③④⑤⑥⑦⑧'[i] ?? i + 1} ${q.choices[i].content}`
+  }
+  return a.answerText ?? ''
+}
+
+// 풀이 종료 후 결과: 점수, 문항별 정오, 선택한 문항의 해설
+function QuizResult({ attempt, questions, elapsedSeconds, onHome, onSearch, onWrongNotes }) {
   const byQuestion = new Map(attempt.answers.map((a) => [a.questionId, a]))
+  const statuses = questions.map((q) => {
+    const a = byQuestion.get(q.id)
+    return !a ? 'none' : a.correct ? 'right' : 'wrong'
+  })
+  const wrongCount = statuses.filter((s) => s !== 'right').length
+  const firstWrong = statuses.findIndex((s) => s !== 'right')
+  const [selected, setSelected] = useState(firstWrong === -1 ? 0 : firstWrong)
+
+  const q = questions[selected]
+  const a = byQuestion.get(q.id)
+  const percent = attempt.total ? Math.round((attempt.score / attempt.total) * 100) : 0
+
   return (
     <div className="screen quizResult">
-      <h1 className="screenTitle">풀이 결과</h1>
-      <p className="resultScore">
-        <strong>{attempt.score}</strong> / {attempt.total}
-      </p>
-      <p className="resultSub">{attempt.setTitle}</p>
+      <ResultSummary setTitle={attempt.setTitle} correct={attempt.score} total={attempt.total} onClose={onHome} />
 
-      <ul className="resultList">
-        {questions.map((q, i) => {
-          const a = byQuestion.get(q.id)
-          const status = !a ? 'none' : a.correct ? 'right' : 'wrong'
-          return (
-            <li key={q.id} className={`resultItem resultItem_${status}`}>
-              <div className="resultItemHead">
-                <span className="resultNo">{i + 1}번</span>
-                <span className="resultBadge">{status === 'right' ? '정답' : status === 'wrong' ? '오답' : '미응답'}</span>
-              </div>
-              <p className="resultQuestion">{q.content}</p>
-              {status !== 'right' && a && (
-                <p className="resultAnswer">정답: {a.correctAnswer}</p>
-              )}
-              {status !== 'right' && a?.explanation && <p className="resultExplain">{a.explanation}</p>}
-              {a?.aiFeedback && <p className="resultExplain">{a.aiFeedback}</p>}
-            </li>
-          )
-        })}
-      </ul>
+      <div className="resultStats">
+        <ResultStat label="점수" value={`${percent}점`} />
+        {elapsedSeconds != null && <ResultStat label="소요 시간" value={formatElapsed(elapsedSeconds)} />}
+      </div>
 
-      <div className="resultActions">
-        <Button variant="soft" className="resultSecondary" onClick={onSearch}>다른 문제 찾기</Button>
-        <Button onClick={onHome}>홈으로</Button>
+      <div className="resultActionRow">
+        <ResultActionButton icon="/assets/result/share.svg" label="결과 공유" disabled />
+        <ResultActionButton icon="/assets/result/saved.svg" label="학습 기록 저장됨" disabled />
+        <ResultActionButton icon="/assets/result/report.svg" label="오류 신고" disabled />
+      </div>
+
+      <div className="resultSectionHead">
+        <h2 className="resultSectionTitle">문항별 결과</h2>
+        <span className="resultSectionNote">오답 <strong>{wrongCount}</strong> · 오답 노트에 자동 저장</span>
+      </div>
+      <QuestionResultGrid items={statuses} selectedIndex={selected} onSelect={setSelected} />
+
+      {statuses[selected] !== 'right' && a && (
+        <WrongAnswerCard
+          number={selected + 1}
+          myAnswer={answerLabel(q, a)}
+          correctAnswer={a.correctAnswer}
+          explanation={a.explanation || a.aiFeedback}
+        />
+      )}
+
+      {wrongCount > 0 && (
+        <RecommendCard
+          label="유사 문제 추천"
+          title="비슷한 유형 문제 풀어보기"
+          desc={`틀린 ${firstWrong + 1}번과 같은 유형`}
+          onClick={onSearch}
+        />
+      )}
+
+      <div className="screenSpacer" />
+      <div className="resultBar">
+        <button type="button" className="resultBarSecondary" onClick={onWrongNotes}>오답 노트 보기</button>
+        <button type="button" className="resultBarPrimary" onClick={onHome}>홈으로</button>
       </div>
     </div>
   )

@@ -1,0 +1,6 @@
+.wrongAnswerCard { display: flex; flex-direction: column; gap: 8px; padding: 20px 15px; border: 1px solid #333; border-radius: 16px; background: #000; }
+.wrongAnswerHead { display: flex; align-items: center; gap: 8px; font-size: 13px; }
+.wrongAnswerNo { font-weight: 800; color: #ff2b00; }
+.wrongAnswerMine { color: #9a9a9a; }
+.wrongAnswerCorrect { font-size: 13px; font-weight: 700; color: #9355f6; }
+.wrongAnswerExplain { font-size: 14px; line-height: 1.65; color: #ccc; white-space: pre-wrap; }

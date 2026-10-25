@@ -13,6 +13,9 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
+/* 페이지마다 스크롤바 유무가 달라 화면이 좌우로 흔들리는 것을 막는다 */
+html { overflow-y: scroll; scrollbar-gutter: stable; }
+
 body {
   font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
   color: var(--text);

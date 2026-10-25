@@ -1,32 +1,37 @@
 import { useCallback, useState } from "react";
+import SplashPage from "./pages/SplashPage";
 import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
 import ForgotPasswordPage from "./pages/ForgotPasswordPage";
 import HomePage from "./pages/HomePage";
 import ClassroomPage from "./pages/ClassroomPage";
+import CreateClassroomPage from "./pages/CreateClassroomPage";
 import SearchPage from "./pages/SearchPage";
 import CreatePage from "./pages/CreatePage";
 import MyPage from "./pages/MyPage";
+import WrongNotePage from "./pages/WrongNotePage";
 import SetDetailPage from "./pages/SetDetailPage";
 import SolvePage from "./pages/SolvePage";
-import { getToken } from "./api/http";
 
 const PAGES = {
+  splash: SplashPage,
   login: LoginPage,
   signup: SignupPage,
   forgot: ForgotPasswordPage,
   home: HomePage,
   classroom: ClassroomPage,
+  createClassroom: CreateClassroomPage,
   search: SearchPage,
   create: CreatePage,
   my: MyPage,
+  wrongNotes: WrongNotePage,
   setDetail: SetDetailPage,
   solve: SolvePage,
 };
 
 function App() {
   const [route, setRoute] = useState(() => ({
-    page: getToken() ? "home" : "login",
+    page: "splash",
     params: {},
   }));
   const navigate = useCallback(

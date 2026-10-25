@@ -1,0 +1,5 @@
+.questionResultGrid { display: grid; grid-template-columns: repeat(5, 48px); justify-content: space-between; gap: 12px 0; margin-top: 16px; }
+.questionResultCell { height: 48px; border-radius: 24px; background: #1e1e1e; font-size: 15px; font-weight: 700; color: #fff; }
+.questionResultCell_wrong { background: #ff2b00; }
+.questionResultCell_none { background: #2b2b2b; }
+.questionResultCell.isSelected { box-shadow: 0 0 0 2px #9355f6; }

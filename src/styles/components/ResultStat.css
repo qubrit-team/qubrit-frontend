@@ -1,0 +1,3 @@
+.resultStat { display: flex; flex-direction: column; align-items: center; gap: 6px; min-width: 85px; }
+.resultStatLabel { font-size: 13px; color: #9a9a9a; }
+.resultStatValue { font-size: 20px; font-weight: 700; color: #fff; }
